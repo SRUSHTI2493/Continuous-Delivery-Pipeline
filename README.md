@@ -295,3 +295,84 @@ artifacts:
 :small_blue_diamond: Wait for the build to complete. As you are waiting you should see a green bar at the top of the page with the message Build started, the progress for your build under Build log, and, after a couple minutes, a green checkmark and a Succeeded 
  message confirming the build worked.
 
+# Module 4: Create Delivery Pipeline
+**In this module, you will use AWS CodePipeline to set up a continuous delivery pipeline with source, build, and deploy stages**
+
+## Overview
+In this module, you will use AWS CodePipeline to set up a continuous delivery pipeline with source, build, and deploy stages. The pipeline will detect changes in the code stored in your GitHub repository, build the source code using AWS CodeBuild, and then deploy your application to AWS Elastic Beanstalk.
+
+## What you will accomplish
+**In this module, you will:**
+
+:small_blue_diamond:Set up a continuous delivery pipeline on AWS CodePipeline
+
+:small_blue_diamond:Configure a source stage using your GitHub repo
+
+:small_blue_diamond:Configure a build stage using AWS CodeBuild
+
+:small_blue_diamond:Configure a deploy stage using your AWS ElasticBeanstalk application
+
+:small_blue_diamond:Deploy the application hosted on GitHub to Elastic Beanstalk through a pipeline
+
+# Implementation
+
+**:large_orange_diamond: Create a new pipeline**
+
+:small_blue_diamond: In a browser window, open the AWS CodePipeline console.
+
+:small_blue_diamond: Choose the orange Create pipeline button. A new screen will open up so you can set up the pipeline.
+
+:small_blue_diamond: In the Pipeline name field, enter Pipeline-DevOpsGettingStarted.
+
+:small_blue_diamond: Confirm that New service role is selected.
+
+:small_blue_diamond: Choose the orange Next button.
+
+**:large_orange_diamond: Configure the source stage**
+
+:small_blue_diamond: Select GitHub version 1 from the Source provider dropdown menu.
+
+:small_blue_diamond:Choose the white Connect to GitHub button. A new browser tab will open asking you to give AWS CodePipeline access to your GitHub repo.
+
+:small_blue_diamond:Choose the green Authorize aws-codesuite button. Next, you will see a green box with the message You have successfully configured the action with the provider.
+
+:small_blue_diamond:From the Repository dropdown, select the repo you created in Module 1.
+
+:small_blue_diamond:Select main from the branch dropdown menu.
+
+:small_blue_diamond:Confirm that GitHub webhooks is selected.
+
+:small_blue_diamond:Choose the orange Next button
+
+**:large_orange_diamond: Configure the build stage**
+
+:small_blue_diamond: From the Build provider dropdown menu, select AWS CodeBuild.
+
+:small_blue_diamond: Under Region confirm that the US West (Oregon) Region is selected.
+
+:small_blue_diamond: Select Build-DevOpsGettingStarted under Project name.
+
+:small_blue_diamond: Choose the orange Next button.
+
+**:large_orange_diamond: Configure the Deploy stage**
+
+:small_blue_diamond: Select AWS Elastic Beanstalk from the Deploy provider dropdown menu.
+
+:small_blue_diamond:  Under Region, confirm that the US West (Oregon) Region is selected.
+
+:small_blue_diamond:  Select the field under Application name and confirm you can see the app DevOpsGettingStarted created in Module 2.
+
+:small_blue_diamond:  Select DevOpsGettingStarted-env from the Environment name textbox.
+
+:small_blue_diamond:  Choose the orange Next button. You will now see a page where you can review the pipeline configuration.
+
+:small_blue_diamond:  Choose the orange Create pipeline button.
+
+**:large_orange_diamond: watch first pipeline Execution**
+
+**While watching the pipeline execution, you will see a page with a green bar at the top. This page shows all the steps defined for the pipeline and, after a few minutes, each will change from blue to green.**
+
+:small_blue_diamond: Once the Deploy stage has switched to green and it says Succeeded, choose AWS Elastic Beanstalk. A new tab listing your AWS Elastic Beanstalk environments will open.
+
+:small_blue_diamond: Select the URL in the Devopsgettingstarted-env row. You should see a webpage with a white background and the text you included in your GitHub commit in Module 1.
+
