@@ -104,3 +104,90 @@ git add app.js
 git commit -m "change message"
 
 ```
+
+:small_blue_diamond: Push the local changes to the remote repo hosted on GitHub with the following command. Note that you need to configure Personal access tokens (classic) under Developer Settings in GitHub for remote authentication.
+
+```
+git push
+
+```
+
+**:large_orange_diamond:Test your change**
+
+:small_blue_diamond: In your browser window, open GitHub.
+
+:small_blue_diamond: In the left navigation panel, under Repositories, select the one named Continuous-Delivery-Pipeline.
+
+:small_blue_diamond: Choose the app.js file. The contents of the file, including your change, should be displayed
+
+# Module 2: Deploy Web App
+**In this module, you will create and deploy a web application using AWS Elastic Beanstalk**
+
+## Overview
+In this module, you will use the AWS Elastic Beanstalk console to create and deploy a web application. AWS Elastic Beanstalk is a compute service that makes it easy to deploy and manage applications on AWS without having to worry about the infrastructure that runs them. You will use the Create web app wizard to create an application and launch an environment with the AWS resources needed to run your application. In subsequent modules, you will be using this environment and your continuous delivery pipeline to deploy the Hello World! web app created in Module 1
+
+## What you will accomplish
+
+**In this module, you will:**
+:small_blue_diamond: Configure and create an AWS Elastic Beanstalk environment
+
+:small_blue_diamond: Deploy a sample web app to AWS Elastic Beanstalk
+
+:small_blue_diamond: Test the sample web app 
+
+# Implementation
+
+**:large_orange_diamond:Configure an AWS Elastic Bensstalk Console**
+
+:small_blue_diamond: In a new browser tab, open the AWS Elastic Beanstalk console.
+
+:small_blue_diamond: Choose the orange Create Application button.
+
+:small_blue_diamond: Choose Web server environment under the Configure environment heading.
+
+:small_blue_diamond: In the text box under the heading Application name, enter DevOpsGettingStarted.
+
+:small_blue_diamond: In the Platform dropdown menu, under the Platform heading, select Node.js . Platform branch and Platform version will automatically populate with default selections.
+
+:small_blue_diamond: Confirm that the radio button next to Sample application under the Application code heading is selected.
+
+:small_blue_diamond: Confirm that the radio button next to Single instance (free tier eligible) under the Presets heading is selected.
+
+:small_blue_diamond: Select Next.
+
+**Configure environment**
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/f3eb23d8-9658-4f8a-ba5c-99f507eae6a5)
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/2e54b97c-3357-4895-aecb-375a23f31ff7)
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/77a0230d-28e2-4091-8f9d-6416b3fced18)
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/10617595-da3f-4aa7-9868-c6864d6ee5f9)
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/dcac68d4-f6a2-429e-9c60-8d1982ecd36b)
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/09d74fcc-c2cc-4440-a9d0-57a3c0f60579)
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/e05a182a-0972-481c-a858-c0a1bd3abfce)
+
+
+ **On the Configure service access screen, choose Use an existing service role for Service Role.**
+
+:small_blue_diamond: For EC2 instance profile dropdown list, the values displayed in this dropdown list may vary, depending on whether you account has previously created a new environment.
+
+:small_blue_diamond: Choose one of the following, based on the values displayed in your list.
+
+:small_blue_diamond: If aws-elasticbeanstalk-ec2-role displays in the dropdown list, select it from the EC2 instance profile dropdown list.
+
+:small_blue_diamond: If another value displays in the list, and it’s the default EC2 instance profile intended for your environments, select it from the EC2 instance profile dropdown list.
+
+:small_blue_diamond: If the EC2 instance profile dropdown list doesn't list any values to choose from, expand the procedure that follows, Create IAM Role for EC2 instance profile.
+
+:small_blue_diamond: Complete the steps in Create IAM Role for EC2 instance profile to create an IAM Role that you can subsequently select for the EC2 instance profile. Then, return back to this step.
+
+:small_blue_diamond: Now that you've created an IAM Role, and refreshed the list, it displays as a choice in the dropdown list. Select the IAM Role you just created from the EC2 instance profile dropdown list.
+
+:small_blue_diamond: Choose Skip to Review on the Configure service access page.
+
+    **This will select the default values for this step and skip the optional steps.**
