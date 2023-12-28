@@ -190,4 +190,4 @@ In this module, you will use the AWS Elastic Beanstalk console to create and dep
 
 :small_blue_diamond: Choose Skip to Review on the Configure service access page.
 
-    **This will select the default values for this step and skip the optional steps.**
+  **This will select the default values for this step and skip the optional steps.**
