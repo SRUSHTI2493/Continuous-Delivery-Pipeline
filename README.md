@@ -78,8 +78,29 @@ assumes you have an existing GitHub account and Git installed on your computer. 
 
 **:large_orange_diamond:Push a chnage to your new repo**
 
-:small_blue_diamond: Go to the repository and choose the green Code button near the top of the page.
+:small_blue_diamond: Go to the repository (https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline) and choose the green Code button near the top of the page.
 
 :small_blue_diamond: To clone the repository using HTTPS, confirm that the heading says Clone with HTTPS. If not, select the Use HTTPS link.
 
 :small_blue_diamond: Choose the white button with a clipboard icon on it (to the right of the URL).
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/5a14962d-d084-435a-8228-c390fa42cfe9)
+
+:small_blue_diamond:  If you're on a **Mac or Linux computer**, open your terminal. If you're on Windows, launch Git Bash.
+
+:small_blue_diamond:  In the terminal or Bash platform, whichever you are using, enter the following command and paste the URL you just copied in Step 2 when you clicked the clipboard icon. Be sure to change "YOUR-USERNAME" to your GitHub username. You should see a message in your terminal that starts with Cloning into. This command creates a new folder that has a copy of the files from the GitHub repo.
+
+```
+git clone https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline.git
+```
+
+:small_blue_diamond: In the new folder there is a file named app.js. Open app.js in your favorite code editor.
+
+:small_blue_diamond: Change the message in line 5 to say something other than "Hello World!" and save the file.
+
+:small_blue_diamond: Go to the folder created with the name Continuous-Delivery-Pipeline/ and Commit the change with the following commands:
+
+```
+git add app.js
+git commit -m "change message"
+
+```
