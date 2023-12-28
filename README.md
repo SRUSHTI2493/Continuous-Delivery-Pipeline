@@ -159,17 +159,7 @@ In this module, you will use the AWS Elastic Beanstalk console to create and dep
 
 ![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/f3eb23d8-9658-4f8a-ba5c-99f507eae6a5)
 
-![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/2e54b97c-3357-4895-aecb-375a23f31ff7)
 
-![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/77a0230d-28e2-4091-8f9d-6416b3fced18)
-
-![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/10617595-da3f-4aa7-9868-c6864d6ee5f9)
-
-![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/dcac68d4-f6a2-429e-9c60-8d1982ecd36b)
-
-![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/09d74fcc-c2cc-4440-a9d0-57a3c0f60579)
-
-![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/e05a182a-0972-481c-a858-c0a1bd3abfce)
 
 
  **On the Configure service access screen, choose Use an existing service role for Service Role.**
