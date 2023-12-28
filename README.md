@@ -376,3 +376,89 @@ In this module, you will use AWS CodePipeline to set up a continuous delivery pi
 
 :small_blue_diamond: Select the URL in the Devopsgettingstarted-env row. You should see a webpage with a white background and the text you included in your GitHub commit in Module 1.
 
+# Module 5: Finalize Pipeline and Test
+**In this module, you will add a review stage to your countinuous delivery pipeline using AWS CodePipeline**
+
+## Overview
+In this module, you will use AWS CodePipeline to add a review stage to your countinuous delivery pipeline.
+
+As part of this process, you can add an approval action to a stage at the point where you want the pipeline execution to stop so someone can manually approve or reject the action. Manual approvals are useful to have someone else review a change before deployment. If the action is approved, the pipeline execution resumes. If the action is rejected—or if no one approves or rejects the action within seven days—the result is the same as the action failing, and the pipeline execution does not continue.
+
+## What you will accomplish
+**In this module, you will:**
+:small_blue_diamond: Add a review stage to your pipeline
+
+:small_blue_diamond: Manually approve a change before it is deployed
+
+**:large_orange_diamond: Create review stage in pipeline**
+
+:small_blue_diamond: Open the AWS CodePipeline console.
+
+:small_blue_diamond: You should see the pipeline we created in Module 4, which was called Pipeline-DevOpsGettingStarted. Select this pipeline.
+
+:small_blue_diamond: Choose the white Edit button near the top of the page.
+
+:small_blue_diamond: Choose the white Add stage button between the Build and Deploy stages.
+
+:small_blue_diamond: In the Stage name field, enter Review.
+
+:small_blue_diamond: Choose the orange Add stage button.
+
+:small_blue_diamond: In the Review stage, choose the white Add action group button.
+
+:small_blue_diamond: Under Action name, enter Manual_Review.
+
+:small_blue_diamond: From the Action provider dropdown, select Manual approval.
+
+:small_blue_diamond: Confirm that the optional fields have been left blank.
+
+:small_blue_diamond: Choose the orange Done button.
+
+:small_blue_diamond: Choose the orange Save button at the top of the page.
+
+:small_blue_diamond: Choose the orange Save button to confirm the changes. You will now see your pipeline with four stages: Source, Build, Review, and Deploy.
+
+**:large_orange_diamond: Push new commit to your repo**
+
+In your favorite code editor, open the app.js file from Module 1.
+
+:small_blue_diamond: Change the message in Line 5.
+
+:small_blue_diamond: Save the file.
+
+:small_blue_diamond: Open your preferred Git client.
+
+:small_blue_diamond: Navigate to the folder created in Module 1.
+
+Commit the change with the following commands:
+
+```
+git add app.js
+git commit -m "Full pipeline test"
+
+```
+:small_blue_diamond: Push the local changes to the remote repo hosted on GitHub with the following command:
+
+```
+git push
+```
+
+**:large_orange_diamond: Monitore the pipeline and manually approve the changes**
+
+:small_blue_diamond: Navigate to the AWS CodePipeline console.
+
+:small_blue_diamond: Select the pipeline named Pipeline-DevOpsGettingStarted. You should see the Source and Build stages switch from blue to green.
+
+:small_blue_diamond: When the Review stage switches to blue, choose the white Review button.
+
+:small_blue_diamond: Write an approval comment in the Comments textbox.
+
+:small_blue_diamond: Choose the orange Approve button.
+
+:small_blue_diamond: Wait for the Review and Deploy stages to switch to green.
+
+:small_blue_diamond: Select the AWS Elastic Beanstalk link in the Deploy stage. A new tab listing your Elastic Beanstalk environments will open.
+
+:small_blue_diamond: Select the URL in the Devopsgettingstarted-env row. You should see a webpage with a white background and the text you had in your most recent GitHub commit.
+
+### Congratulations! :boom: You have a fully functional continuous delivery pipeline hosted on AWS.
