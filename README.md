@@ -160,9 +160,7 @@ In this module, you will use the AWS Elastic Beanstalk console to create and dep
 ![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/f3eb23d8-9658-4f8a-ba5c-99f507eae6a5)
 
 
-
-
- **On the Configure service access screen, choose Use an existing service role for Service Role.**
+**On the Configure service access screen, choose Use an existing service role for Service Role.**
 
 :small_blue_diamond: For EC2 instance profile dropdown list, the values displayed in this dropdown list may vary, depending on whether you account has previously created a new environment.
 
@@ -181,3 +179,29 @@ In this module, you will use the AWS Elastic Beanstalk console to create and dep
 :small_blue_diamond: Choose Skip to Review on the Configure service access page.
 
   **This will select the default values for this step and skip the optional steps.**
+
+**Configure Service Access**
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/530a8a71-5427-4d89-8478-18ea09479639)
+
+:small_blue_diamond: The Review page displays a summary of all your choices.
+
+:small_blue_diamond: Choose Submit at the bottom of the page to initialize the creation of your new environment.
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/83151d31-225d-45af-ba23-9f54fc0db0dc)
+
+**While waiting for deployment, you should see:**
+
+A screen that will display status messages for your environment.
+After a few minutes have passed, you will see a green banner with a checkmark at the top of the environment screen.
+Once you see the banner, you have successfully created an AWS Elastic Beanstalk application and deployed it to an environment.
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/10b8f750-7c8a-4d4f-9a04-24565551c76c)
+
+**:large_orange_diamond:Test your web app**
+
+:small_blue_diamond: To test your sample web app, select the link under the name of your environment.
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/4fe8ef13-4b1b-4c97-9835-0ae8abf21272)
+
+:small_blue_diamond: Once the test has completed, a new browser tab should open with a webpage congratulating you!
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/bd291005-7aaf-4fac-9177-d790c773af37)
