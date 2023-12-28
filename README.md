@@ -64,10 +64,22 @@ In this module, you will set up a repository for your code so it can be easily a
 
  # Implementation
 
-**fork the starter repo**
+**:large_orange_diamond:fork the starter repo**
+
 assumes you have an existing GitHub account and Git installed on your computer. If you don't have either of these two installed, you can follow these step-by-step instructions.
 
 :small_blue_diamond: In a new browser tab, navigate to GitHub and make sure you are logged into your account.
-:small_blue_diamond: In that same tab, open the aws-elastic-beanstalk-express-js-sample repo.
+
+:small_blue_diamond: In that same tab, open the (https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline) repo.
+
 :small_blue_diamond:Choose the white Fork button on the top right corner of the screen. Next, you will see a small window asking you where you would like to fork the repo.
+
 :small_blue_diamond: Verify it is showing your account and choose Create a fork. After a few seconds, your browser will display a copy of the repo in your account under Repositories.
+
+**:large_orange_diamond:Push a chnage to your new repo**
+
+:small_blue_diamond: Go to the repository and choose the green Code button near the top of the page.
+
+:small_blue_diamond: To clone the repository using HTTPS, confirm that the heading says Clone with HTTPS. If not, select the Use HTTPS link.
+
+:small_blue_diamond: Choose the white button with a clipboard icon on it (to the right of the URL).
