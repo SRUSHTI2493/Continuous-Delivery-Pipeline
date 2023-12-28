@@ -205,3 +205,93 @@ Once you see the banner, you have successfully created an AWS Elastic Beanstalk 
 
 :small_blue_diamond: Once the test has completed, a new browser tab should open with a webpage congratulating you!
 ![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/bd291005-7aaf-4fac-9177-d790c773af37)
+
+# Module 3: Create Build Project
+**In this module, you will configure and execute the application build process using AWS CodeBuild**
+
+## Overview
+In this module, you will use AWS CodeBuild to build the source code previously stored in your GitHub repository. AWS CodeBuild is a fully managed continuous integration service that compiles source code, runs tests, and produces software packages that are ready to deploy.
+
+# What you will accomplish
+**In this module, you will:**
+
+:small_blue_diamond:  Create a build project with AWS CodeBuild
+
+:small_blue_diamond:  Set up GitHub as the source provider for a build project
+
+:small_blue_diamond:  Run a build on AWS CodeBuild
+
+**:large_orange_diamond: configure the AWS Codebuild Project**
+
+:small_blue_diamond: In a new browser tab, open the AWS CodeBuild console.
+
+:small_blue_diamond: Choose the orange Create project button.
+
+:small_blue_diamond: In the Project name field, enter Build-DevOpsGettingStarted.
+
+:small_blue_diamond: Select GitHub from the Source provider dropdown menu.
+
+:small_blue_diamond: Confirm that the Connect using OAuth radio button is selected.
+
+:small_blue_diamond: Choose the white Connect to GitHub button. A new browser tab will open asking you to give AWS CodeBuild access to your GitHub repo.
+
+:small_blue_diamond: Choose the green Authorize aws-codesuite button.
+
+:small_blue_diamond: Enter your GitHub password.
+
+:small_blue_diamond: Choose the orange Confirm button.
+
+:small_blue_diamond: Select Repository in my GitHub account.
+
+:small_blue_diamond: Enter aws-elastic-beanstalk-express-js-sample in the search field.
+
+:small_blue_diamond: Select the repo you forked in Module 1. After selecting your repo, your screen should look like this:
+
+![image](https://github.com/SRUSHTI2493/Continuous-Delivery-Pipeline/assets/87080882/7742d5ba-81fa-4076-9b6f-909b698f63e9)
+
+:small_blue_diamond:  Confirm that Managed Image is selected.
+
+:small_blue_diamond:  Select Amazon Linux 2 from the Operating system dropdown menu.
+
+:small_blue_diamond:  Select Standard from the Runtime(s) dropdown menu.
+
+:small_blue_diamond:  Select aws/codebuild/amazonlinux2-x86_64-standard:3.0 from the Image dropdown menu.
+
+:small_blue_diamond:  Confirm that Always use the latest image for this runtime version is selected for Image version.
+
+:small_blue_diamond:  Confirm that Linux is selected for Environment type.
+
+:small_blue_diamond:  Confirm that New service role is selected.
+
+**:large_orange_diamond: Create a BuildSpace file for object**
+
+:small_blue_diamond: Select Insert build commands.
+
+:small_blue_diamond: Choose Switch to editor.
+
+:small_blue_diamond: Replace the Buildspec in the editor with the code below:
+
+```
+version: 0.2
+phases:
+    build:
+        commands:
+            - npm i --save
+artifacts:
+    files:
+        - '**/*'
+```
+
+:small_blue_diamond: Choose the orange Create build project button. You should now see a dashboard for your project.
+
+**:large_orange_diamond: Test the code build Project**
+
+:small_blue_diamond: Choose the orange Start build button. This will load a page to configure the build process.
+
+:small_blue_diamond: Confirm that the loaded page references the correct GitHub repo.
+
+:small_blue_diamond: Choose the orange Start build button.
+
+:small_blue_diamond: Wait for the build to complete. As you are waiting you should see a green bar at the top of the page with the message Build started, the progress for your build under Build log, and, after a couple minutes, a green checkmark and a Succeeded 
+ message confirming the build worked.
+
