@@ -463,7 +463,7 @@ git push
 
 ### Congratulations! :boom: You have a fully functional continuous delivery pipeline hosted on AWS.
 
-# :fire_engine:Clean up resources :fire_engine:
+# :rotating_light: Clean up resources :rotating_light:
 
 **:red_circle: Delete AWS elastic Banstalk Application**
 
