@@ -462,3 +462,62 @@ git push
 :small_blue_diamond: Select the URL in the Devopsgettingstarted-env row. You should see a webpage with a white background and the text you had in your most recent GitHub commit.
 
 ### Congratulations! :boom: You have a fully functional continuous delivery pipeline hosted on AWS.
+
+# :fire_engine:Clean up resources :fire_engine:
+
+**:red_circle: Delete AWS elastic Banstalk Application**
+
+:small_red_triangle: In a new browser window, open the AWS Elastic Beanstalk Console.
+
+:small_red_triangle: In the left navigation menu, click on "Applications." You should see the "DevOpsGettingStarted" application listed under "All applications."
+
+:small_red_triangle: Select the radio button next to "DevOpsGettingStarted."
+
+:small_red_triangle: Click the white dropdown "Actions" button at the top of the page.
+
+:small_red_triangle: Select "Delete application" under the dropdown menu.
+
+:small_red_triangle: Type "DevOpsGettingStarted" in the text box to confirm deletion.
+
+:small_red_triangle: Click the orange "Delete" button.
+
+**:red_circle: Delete Pipeline in AWS CodePipeline**
+
+:small_red_triangle:  In a new browser window, open the AWS CodePipeline Console.
+
+:small_red_triangle:  Select the radio button next to "Pipeline-DevOpsGettingStarted."
+
+:small_red_triangle:  Click the white "Delete pipeline" button at the top of the page.
+
+:small_red_triangle:  Type "delete" in the text box to confirm deletion.
+
+:small_red_triangle:  Click the orange "Delete" button.
+
+**:red_circle: Delete Pipeline Resourses form Amzon S3 bucket**
+
+:small_red_triangle:  In a new browser window, open the Amazon S3 Console.
+
+:small_red_triangle:  You should see a bucket named "codepipeline-us-west-2" followed by your AWS account number. Click on this bucket. Inside this bucket, you should see a folder named "Pipeline-DevOpsGettingStarted."
+
+:small_red_triangle:  Select the checkbox next to the "Pipeline-DevOpsGettingStarted" folder
+
+:small_red_triangle:  Click the white "Actions" button from the dropdown menu.
+
+:small_red_triangle:  Select "Delete" under the dropdown menu.
+
+:small_red_triangle:  Click the blue "Delete" button.
+
+
+**:red_circle: Delete build project in AWS CodeBuild**
+
+:small_red_triangle:In a new browser window, open the AWS CodeBuild Console.
+
+:small_red_triangle:In the left navigation, click on "Build projects" under "Build." You should see the "Build-DevOpsGettingStarted" build project listed under "Build project."
+
+:small_red_triangle:Select the radio button next to "Build-DevOpsGettingStarted."
+
+:small_red_triangle:Click the white "Delete build project" button at the top of the page.
+
+:small_red_triangle:Type "delete" in the text box to confirm deletion.
+
+:small_red_triangle:Click the orange "Delete" button.
